@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0"> 
+    <link href="./bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script> <!--lien vers le fichier jquery pour l'effet "hover"-->
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script> <!--lien vers fichier JQuery pour l'effet filtre-->
+    
+        <script type="text/javascript">
+    $(function () {
+        
+        var filterList = {
+        
+            init: function () {
+            
+                // Plugin Mixitup, qui permet de filtrer les vignettes par catégorie
+                $('#portfoliolist').mixitup({
+                    targetSelector: '.portfolio',
+                    filterSelector: '.filter',
+                    effects: ['fade'],
+                    easing: 'snap',
+                    // call the hover effect
+                    onMixEnd: filterList.hoverEffect()
+                });             
+            
+            },
+            
+            hoverEffect: function () {
+            
+                // Fonction pour l'effet "hover"
+                $('#portfoliolist .portfolio').hover(
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');             
+                    },
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');                               
+                    }       
+                );              
+            
+            }
+
+        };
+        
+        // Lance les deux fonctions "hover" et "filtre"
+        filterList.init();
+        
+        
+    }); 
+    </script>
+</head>
+<body>
+    
+
+        
+
+        
+        <div class="container">
+            
+                <header>
+                    <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        
+                        <h1>Tristan Lozahic - Developpeur Internet </h1>
+                        
+                        <div class="photo"><img src="./images/geek.png"</div> 
+                    
+                    </div>
+                    </div>   
+                
+                </header>
+        </div>
+    
+    
+
+
+
+
+
+    
+    <div class="container">
+
+        <main>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="colonne">
+                        <h2>Experience professionelle</h2>
+                        <ul>
+                            <li>Technicien d'exploitation informatique ag2r 2009</li>
+                            <li>Technicien d'exploitation informatique Natixis 2007-2008</li>
+                            <li>Technicien support micro-informatique Groupe Hachette 2007</li>
+                            <li>Technicien Hot-line et itinerant en interim et cdd 2002-2006</li>
+                            <li>Technicien Hot-line Air France 2001</li>
+                        </ul>
+                    </div> </div>     
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="colonne">
+                            <h2>Formation</h2>
+                            <ul>        
+                                <li>Formation technicien analyste d'exploitation</li>
+                                <li>License biologie</li>
+                                <li>Daeu B</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="colonne">
+                            <h2>Ambitions</h2>
+                            <p>Apprendre a developper, ce n'est pas seulement apprendre pour changer de metier, c'est aussi apprendre a apprendre.
+                                Apprendre a developper ce n'est pas seulement apprendre a apprendre, c'est aussi developper sa creativite. Quels sont les metiers qui permettent d'etre a la fois dans le futur et de pouvoir y exercer sa creativite ? 
+                                Beaucoup peut etre, et developpeur web en fait surement partie :)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DIV JQUERY PORTFOLIO -->
+
+
+
+                    <div class="container">
+
+                        <!-- <div class="row"> -->
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+
+                            <h2>Mon portfolio</h2>
+                            <!--data-filter permet de filtrer les vignettes par catégorie-->
+                            <ul id="filters" class="clearfix row">
+                                <li><span class="filter active" data-filter="cat1 cat2 cat3 cat4">Toutes mes catégories</span></li>
+                                <li><span class="filter" data-filter="cat1">HTML/CSS</span></li>
+                                <li><span class="filter" data-filter="cat2">Javascript</span></li>
+                                <li><span class="filter" data-filter="cat3">Bootstrap</span></li>
+                                <li><span class="filter" data-filter="cat4">Ruby</span></li>
+                            </ul>
+
+                            <div id="portfoliolist"> <!--La div qui contient les vignettes des projets-->
+
+                                <div class="portfolio cat2" data-cat="cat2">
+                                    <div class="portfolio-wrapper">             
+                                        <img src="img/portfolios/logo/5.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Annuaire</a>
+                                                <span class="text-category">Javascript</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>              
+
+                                <div class="portfolio cat1" data-cat="cat1">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/app/1.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Titre de mon projet HTML/CSS</a>
+                                                <span class="text-category">HTML/CSS</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>      
+
+
+                                <div class="portfolio cat4" data-cat="cat4">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/card/1.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">API Open Food Facts</a>
+                                                <span class="text-category">Ruby</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <div class="portfolio cat1" data-cat="cat1">
+                                    <div class="portfolio-wrapper">
+                                        <img src="img/portfolios/app/3.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Page de profil</a>
+                                                <span class="text-category">HTML/CSS</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>          
+
+
+                                <div class="portfolio cat2" data-cat="cat2">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/logo/1.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Titre de mon projet en Javascript</a>
+                                                <span class="text-category">Javascript</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>                                                                                                                                                          
+
+                                <div class="portfolio cat1" data-cat="cat1">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/app/2.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Page placement div</a>
+                                                <span class="text-category">HTML/CSS</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>                                                      
+
+                                <div class="portfolio cat4" data-cat="cat4">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/card/2.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Exercice en Ruby</a>
+                                                <span class="text-category">Ruby</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>                              
+
+
+                                <div class="portfolio cat3" data-cat="cat3">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/icon/1.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Exercice utilisation Bootstrap</a>
+                                                <span class="text-category">Bootstrap</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="portfolio cat4" data-cat="cat4">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/card/3.png" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Titre de mon projet avec Ruby</a>
+                                                <span class="text-category">Ruby</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>                                                                                                                                                    
+
+                                <div class="portfolio cat2" data-cat="cat2">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/logo/3.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Tic-Tac-Toe</a>
+                                                <span class="text-category">Javascript</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>                                                                  
+
+                                <div class="portfolio cat2" data-cat="cat2">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/logo/4.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Pierre-Feuille-Ciseau</a>
+                                                <span class="text-category">Javascript</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>      
+
+                                <div class="portfolio cat3" data-cat="cat3">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/icon/2.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Titre de mon projet Bootstrap</a>
+                                                <span class="text-category">Bootstrap</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>                                                                                                         
+
+
+                                <div class="portfolio cat2" data-cat="cat2">
+                                    <div class="portfolio-wrapper">         
+                                        <img src="img/portfolios/logo/2.jpg" alt="" />
+                                        <div class="label">
+                                            <div class="label-text">
+                                                <a class="text-title">Cookie Clicker</a>
+                                                <span class="text-category">Javascript</span>
+                                            </div>
+                                            <div class="label-bg"></div>
+                                        </div>
+                                    </div>
+                                </div>              
+                            </div>
+                        </div>
+                    </div><!-- container portfolio-->  
+                </main>
+    </div>
+    <div class="container">
+
+        <footer> 
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-xs-12 contact">
+                        
+<!--                    <div class="contact">-->
+                        <p>
+                            Tristan Lozahic,  email: tristus@hotmail.com
+                        </p>
+                        <p>Adresse : Chateau de la Tristussie    Pays: Tristussie</p>
+<!--                    </div>-->
+                        <form method="post" action"traitement.php" class="formulaire">
+                                
+                                
+                                    <fieldset>
+                                    <label for="contact">Entrez votre nom et prenom</label></br>
+                                    <input type="text" name="nom et prenom" id="contact"required/>
+                                    </fieldset>
+                                    <fieldset>
+                                    <label for="email">Entrez votre adresse email</label></br>
+                                    <input type="text" name="adresse email" id="email" required/>
+                                    </fieldset>
+                                    <!--<input type="text" name="message" id="message"/>  -->
+                                    <fieldset>
+                                    <label for="message">Ecrivez ici votre message</label></br>
+                                    <textarea cols="40" row="45" id="message"required>Entrez votre message ici</textarea>
+                                    </fieldset>
+
+
+                                
+                            <input type="submit" value="Submit" id="bouton"/>
+                            
+                        </form>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 carte">
+<!--                    <div class="carte">-->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.299514412045!2d2.711940951683049!3d48.56581197915801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5f99096e2928f%3A0xd9060d14d9558a35!2sCh%C3%A2teau+de+Vaux+le+Vicomte!5e0!3m2!1sfr!2sfr!4v1453822092218"  width="500" height="280"  frameborder="0" style="border:0" allowfullscreen></iframe>
+<!--                    </div>-->
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+/*/* Fichier CSS pour mon CV */
+* { 
+border: thin dashed black;
+}
+    
+    
+body {
+    
+/*    max-width: 960px;*/
+/*    border: thin transparent solid;*/
+    margin: 0;
+    padding: 0;
+ background-image: url(./images/halftone.png); 
+
+
+}
+
+* {
+    box-sizing:border-box;
+    
+}
+
+/*ul li {
+    list-style-type: square;
+    
+}*/
+
+
+header {
+    
+    background-image: url(./images/concrete_seamless.png);
+    /*border: thin transparent solid;*/
+    min-height: 200px;
+    width: 100%;
+
+}
+
+
+.photo {
+    
+    position: absolute;
+    top: 25px;
+    left: 30px;
+  //  box-sizing: content-box;
+    border: thin black solid;
+    height: 156px;
+
+    
+}
+
+
+
+
+main {
+    
+    background-image: url(./images/halftone.png); 
+/*    border: thin transparent solid;*/
+  /*  position: relative; */
+    
+
+}
+
+footer {
+    
+    background-image: url(./images/footer_lodyas.png);
+/*    border: thin transparent solid;*/
+/*    height: 10%;
+    position: static;
+    width: 960px; */
+
+
+
+}
+
+h1  {
+    
+    
+    padding-left: 160px;
+    font-family: 'Lobster Two', cursive;
+}
+
+h1 {
+    
+    color: rgba(50,200,150,1);
+
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.6em;
+    margin-right: auto;
+    align-content: center;
+}
+
+
+/*.conteneur  {
+    max-width: 960px;
+    width: 100%;
+    padding : 10px;
+    margin : 15px;
+} */
+
+/*[class*="col-"]*/
+
+
+.colonne {
+  
+/*    display : inline-block;
+    width: 220px;
+    padding: 10px;
+    margin : 10px;*/
+/*    border: thin transparent solid;*/
+    vertical-align: top;
+    min-height: 440px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1.8;
+    font-weight: 600;
+    color: darkslategray;
+
+
+
+}
+
+/*.colonne ul li {
+    
+    padding-left: 0;
+}*/
+
+
+
+
+h2 {
+    color: rgba(50,200,150,1);
+    vertical-align : central;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 1.6em;
+    
+}
+
+
+footer {
+    
+    min-height: 220px;
+/*   position: relative;*/
+}
+
+
+.contact {
+    
+    /*padding-right: 100px;
+    text-align: center;
+    width:  400px;*/
+
+    font-size: 1em;
+    font-style: italic;
+   
+    display: inline-block;
+    height: 35%;
+    vertical-align: top;
+    
+        font-family: 'Lora', serif; 
+ color: antiquewhite;
+}
+
+
+.carte > iframe{
+    
+    display: inline-block;
+    width: 90%;
+    right: 01%;
+     height: 35%;
+       padding-left: 05px;
+       padding-top: 20px;
+vertical-align: center;
+    
+}
+
+
+
+
+/*MEDIA QUERIES PORTFOLIO*/
+
+iframe{
+    display:inline-block;
+    vertical-align:top;
+    box-sizing:border-box;
+}
+
+#info {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;              
+    background:#fcf8e3;
+    border:1px solid  #fbeed5;
+    width:95%;
+/*    max-width:900px;*/
+    margin:0 auto 40px auto;
+    font-family:arial;
+    font-size:12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+
+}
+
+    #info .info-wrapper {
+        padding:10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+
+    }
+    
+    #info a {
+        color:#c09853;
+        text-decoration:none;
+    }
+    
+    #info p {
+        margin:5px 0 0 0;
+    }
+
+
+.container  { 
+    position: relative; 
+    width: 960px; 
+    margin: 0 auto; 
+    -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;  
+  border: thin black dashed;
+}
+ 
+#filters {
+    margin:1%;
+    padding:0;
+    list-style:none;
+}
+
+    #filters li {
+        float:left;
+    }
+    
+    #filters li span {
+        display: block;
+        padding:5px 20px;       
+        text-decoration:none;
+        color:#666;
+        cursor: pointer;
+    }
+    
+    #filters li span.active {
+        background: #e95a44;
+        color:#fff;
+    }
+ 
+
+ 
+#portfoliolist .portfolio {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    width:23%;
+    margin:1%;
+    display:none;
+    float:left;
+    overflow:hidden;
+
+}
+
+    .portfolio-wrapper {
+        overflow:hidden;
+        position: relative !important;
+        background: #666;
+        cursor:pointer;
+
+    }
+
+    .portfolio img {
+        max-width:100%;
+        position: relative;
+
+    }
+    
+    .portfolio .label {
+        position: absolute;
+        width: 100%;
+        height:40px;
+        bottom:-40px;
+    }
+
+        .portfolio .label-bg {
+
+            background: #e95a44;
+            width: 100%;
+            height:100%;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    
+        .portfolio .label-text {
+            color:#fff;
+            position: relative;
+            z-index:500;
+            padding:5px 8px;
+        }
+            
+            .portfolio .text-category {
+                display:block;
+                font-size:9px;
+            }
+
+
+
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container, conteneur {
+        width: 768px; 
+    }
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+    .container, conteneur{ 
+        width: 95%; 
+    }
+    
+    #portfoliolist .portfolio {
+        width:48%;
+        margin:1%;
+    }       
+
+    #ads {
+        display:none;
+    }
+    
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container, conteneur{
+        width: 70%;
+    }
+    
+    #ads {
+        display:none;
+    }
+    
+}
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
